@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>학습 진행도 확인</title>
+        <link href="{{ url_for('static', filename='css/blackboard.css') }}" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="submit" id="Log_out">
+            <form action="http://192.168.55.138:5000/logout" method="get">
+                <input type="submit"  value="로그아웃">
+            </form>
+        </div>
+        <div class = "container" id="box">
+            <header class = "head">
+                <div class="image"></div>
+                <div class = "headtitle">
+                    <div class="subtitle">BlackBoard 학습 진행도 확인</div>
+                    
+                </div>
+            </header>
+            <br>
+            <main id="box">
+                <div class="sentence">
+                    <div class="sentencetitle1"><br>수업 목록</div>
+                    <br>
+                    <table class = "table">
+                        <thead>
+                        <tr>
+                            <th class="grade_table_th" rowspan="2">과목명</th>
+                            <th class="grade_table_th" colspan="16">출석 확인</th>
+                            <th class="grade_table_th" colspan="5">과제 확인</th>
+                        </tr>
+                        <tr>
+                            <th class="grade_table_th">1</th>
+                            <th class="grade_table_th">2</th>
+                            <th class="grade_table_th">3</th>
+                            <th class="grade_table_th">4</th>
+                            <th class="grade_table_th">5</th>
+                            <th class="grade_table_th">6</th>
+                            <th class="grade_table_th">7</th>
+                            <th class="grade_table_th">8</th>
+                            <th class="grade_table_th">9</th>
+                            <th class="grade_table_th">10</th>
+                            <th class="grade_table_th">11</th>
+                            <th class="grade_table_th">12</th>
+                            <th class="grade_table_th">13</th>
+                            <th class="grade_table_th">14</th>
+                            <th class="grade_table_th">15</th>
+                            <th class="grade_table_th">16</th>
+                            <th class="grade_table_th">1</th>
+                            <th class="grade_table_th">2</th>
+                            <th class="grade_table_th">3</th>
+                            <th class="grade_table_th">4</th>
+                            <th class="grade_table_th">5</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            {% for x in courselist %}
+                            <tr>
+                                <td class ="grade_table_td">{{x}}</td>
+                                <td class ="grade_table_td">o</td>
+                                <td class ="grade_table_td">x</td>
+                                <td class ="grade_table_td">x</td>
+                                <td class ="grade_table_td">x</td>
+                                <td class ="grade_table_td">x</td>
+                                <td class ="grade_table_td">x</td>
+                                <td class ="grade_table_td">x</td>
+                                <td class ="grade_table_td">x</td>
+                                <td class ="grade_table_td">x</td>
+                                <td class ="grade_table_td">x</td>
+                                <td class ="grade_table_td">x</td>
+                                <td class ="grade_table_td">x</td>
+                                <td class ="grade_table_td">x</td>
+                                <td class ="grade_table_td">x</td>
+                                <td class ="grade_table_td">x</td>
+                                <td class ="grade_table_td">x</td>
+                                <td class ="grade_table_td">x</td>
+                                <td class ="grade_table_td">x</td>
+                                <td class ="grade_table_td">x</td>
+                                <td class ="grade_table_td">x</td>
+                                <td class ="grade_table_td">x</td>
+                            </tr>
+                            {%endfor%}
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
